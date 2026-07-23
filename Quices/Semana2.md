@@ -15,6 +15,7 @@
 ## 1. Nombre del Space
 
 **Nombre: Gemma 4 - Vision Token Budget**
+
 **Enlace: https://huggingface.co/spaces/google/gemma4_vision_token_budget**
 
 ------------------------------------------------------------------------
@@ -29,9 +30,6 @@ Algo a tener en cuenta es que al redimensionarla se puede perder calidad.
 ------------------------------------------------------------------------
 
 ## 3. Análisis PEAS
-
-  Elemento          Respuesta
-  ----------------- ----------------------------------------------------
   
 **Performance**   ¿Qué significa que el agente haga bien su trabajo?
 - Logró representar la imagen con la cantidad de detalle, manteniendo su relación de aspecto o presupuesto visual como lo menciona él mismo
@@ -108,14 +106,43 @@ Encuentre un Space que pueda clasificarse como:
 
 1.  **Totalmente observable, determinista y episódico.**
 - Este de Gemma 4 es un gran ejemplo de totalmente observable, deterministico y episódico.
+  
+**Otro ejemplo**
+- Space seleccionado: OvisOCR2
+- Enlace: https://huggingface.co/spaces/ATH-MaxS/OvisOCR2
+
+_Justificación:_
+
+Totalmente Observable:
+El agente tiene acceso a la totalidad de la información requerida desde el primer momento. Al cargar el documento o la imagen, el sistema percibe el contenido completo (todos los píxeles del texto, tablas o estructura) sin que haya variables ocultas en el entorno que necesite para realizar su tarea.
+
+Determinista:
+La tarea de extraer texto (OCR) y convertirlo a Markdown persigue un resultado exacto. Si se ingresa exactamente la misma imagen, el sistema devolverá la misma transcripción y estructura. A diferencia de un modelo de chat, aquí no se busca creatividad ni hay un factor de azar o "temperatura" que altere drásticamente el texto extraído entre un intento y otro.
+
+Episódico:
+El ciclo de trabajo del agente se limita a una sola acción independiente: recibir un documento, procesarlo y entregar el texto. La conversión de un archivo no tiene ningún impacto en cómo se procesará el siguiente. No hay un estado continuo ni historia que afecte las interacciones futuras.
+
+Me parece que es una herramienta muy directa, enfocada puramente en la utilidad. Por ejemplo, si uno necesita extraer rápidamente un bloque de código en C de una captura de pantalla o digitalizar un texto largo de arquitectura de sistemas, el agente simplemente hace la conversión y termina. Al no haber un flujo de conversación, no necesita hacer uso de la memoria ni analizar el contexto de lo que se haya subido horas antes.
+
 
 2.  **Parcialmente observable, estocástico y secuencial.**
-- Space seleccionado: HF Realtime Voice (Voice chat over WebSocket contra un modelo HF speech-to-speech)
 
-Justifique su respuesta:
-Parcialmente observable: El agente no tiene acceso a toda la información del mundo exterior. Solo "percibe" el fragmento de audio que el usuario le envía a través del micrófono en ese instante. No conoce las verdaderas intenciones del usuario, el entorno en el que se encuentra, ni qué le va a decir en la siguiente interacción.
-Estocástico: Al estar basado en modelos generativos (tanto para procesar el lenguaje como para generar la voz de respuesta), su comportamiento tiene un grado de aleatoriedad. Si le haces exactamente la misma pregunta dos veces, es muy probable que genere respuestas con estructuras de oraciones distintas, o incluso con ligeras variaciones en la entonación y el ritmo de la voz. No hay un solo resultado matemático exacto y predecible.
-Secuencial: Al tratarse de un "chat de voz", las acciones pasadas afectan directamente las acciones futuras. Lo que el agente te responda en el turno número 10 de la conversación dependerá de la memoria y el contexto de todo lo que hablaron en los turnos del 1 al 9. No son episodios aislados.
+- Space seleccionado: HF Realtime Voice
+
+- Enlace: https://huggingface.co/spaces/smolagents/hf-realtime-voice
+
+<img width="1913" height="768" alt="image" src="https://github.com/user-attachments/assets/6a506725-c4e3-4b61-bb4e-02c1c98d14c3" />
+
+_Justificación:_ 
+- Parcialmente Observable:
+El agente es parcialmente observable debido a que escucha lo que el usuario dice en cada interacción, no tiene acceso a todo el contexto interno (emociones, intenciones, pensamientos, tono, etc). Su percepción del entorno es limitada a la entrada de voz que se le da.
+
+- Estocástico: 
+El resultado de cada interacción no es igual: El reconocimiento de voz varia por ruido, acento o entonación en la entrada dada. Inclusive la respuesta a un intento de misma entrada es diferente, lo que deja una incertidumbre clara en las respuestas pro parte del agente.
+
+- Secuencial:
+La conversación se va moldeando a medida que se va avanzando en la conversación ya que lo que responda cada uno de los entes participantes (el usuario y el agente) va a influenciar en el camino que tome la interación.
+Me parece que se hace uso de la memoria, pero no tanto, porque después de un rato le preguntaba por algo similar y no evidenciaba un comportamiento de asociación tan claro. Aunque si hay que evidenciar que es capaz de seguir un flujo de conversación y hacer uso de lo previamente dicho.
 
 ------------------------------------------------------------------------
 
