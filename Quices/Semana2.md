@@ -58,25 +58,15 @@ Algo a tener en cuenta es que al redimensionarla se puede perder calidad.
 
 Complete la siguiente tabla y justifique brevemente cada respuesta.
 
-  Propiedad      Clasificación     Justificación
-  -------------- ----------------- ---------------
-  Observable     Total / Parcial   
-Total. Para realizar su tarea, el sistema recibe la información como: la imagen y la configuración seleccionada por el usuario. Tiene acceso total a las entradas que son proporcionadas por el usuario y eso es especificamente lo único que necesita para su debido trabajo.
+ | **Elemento** | **Clasificación** | **Justificación**                                                                                                                                                                                                                                                                                  |
+| ------------ | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Observable   | Total             | Total. Para realizar su tarea, el sistema recibe la información como: la imagen y la configuración seleccionada por el usuario. Tiene acceso total a las entradas que son proporcionadas por el usuario y eso es especificamente lo único que necesita para su debido trabajo.                     |
+| Determinista | Sí                | Sí. Puesto que si le das una misma imagen y el mismo presupuesto de tokens, el resultado de la redimensión debería ser el mismo. La acción depende de las entradas recibidas por el usuario. (Imagen y configuración)                                                                              |
+| Episódico    | Si                | Si. Cada interacción puede considerarse un episodio independiente porque: se carga una imagen, se selecciona el presupuesto que se quiere y el sistema procesa la imagen. Y puedo repetir este proceso varias veces, porque mi entrada anterior no es necesaria para procesar la siguiente imagen. |
+| Estático     | Si                | Si. El entorno no cambia mientras el agente está tomando una decisión. La imagen y la configuración permanecen iguales durante el procesamiento.                                                                                                                                                   |
+| Discreto     | Si                | Si. Porque las acciones principales realizadas por el agente tienen y se basan en opciones definidas previamente, como los diferentes presupuestos de tokens, además, el resultado se produce mediante un proceso computacional específico que explican por medio de una formula matemática.       |
+| Conocido     | Si                | Si. El usuario conoce las entradas que proporciona al agente y las opciones disponibles, por lo que el funcionamiento del sistema es conocido. Adicional a eso, el presupuesto visual determina cuánto detalle se conserva en la representación de la imagen al final.                             |
 
-  Determinista   Sí / No  
-Sí. Puesto que si le das una misma imagen y el mismo presupuesto de tokens, el resultado de la redimensión debería ser el mismo. La acción depende de las entradas recibidas por el usuario. (Imagen y configuración)
-
-  Episódico      Sí / No   
-Si. Cada interacción puede considerarse un episodio independiente porque: se carga una imagen, se selecciona el presupuesto que se quiere y el sistema procesa la imagen. Y puedo repetir este proceso varias veces, porque mi entrada anterior no es necesaria para procesar la siguiente imagen.
-
-  Estático       Sí / No
-Si. El entorno no cambia mientras el agente está tomando una decisión. La imagen y la configuración permanecen iguales durante el procesamiento. 
-
-  Discreto       Sí / No           
-Si. Porque las acciones principales realizadas por el agente tienen y se basan en opciones definidas previamente, como los diferentes presupuestos de tokens, además, el resultado se produce mediante un proceso computacional específico que explican por medio de una formula matemática.
-  
-Conocido       Sí / No  
-Si. El usuario conoce las entradas que proporciona al agente y las opciones disponibles, por lo que el funcionamiento del sistema es conocido. Adicional a eso, el presupuesto visual determina cuánto detalle se conserva en la representación de la imagen al final.
 
 ------------------------------------------------------------------------
 
