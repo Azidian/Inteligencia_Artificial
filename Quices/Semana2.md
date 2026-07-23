@@ -22,7 +22,8 @@
 ## 2. ¿Qué hace el agente?
 
 Describa en dos o tres líneas cuál es la función del sistema.
-El agente permite cargar una imagen que se puede redimensionar para aumentar o disminuir los tokens que podrían ser usados con esta a la hora de mostrarla o representarla, estos aparecen en la parte inferior de la imagen junto con las dimensiones objetivo. 
+
+_Respuesta:_ El agente permite cargar una imagen que se puede redimensionar para aumentar o disminuir los tokens que podrían ser usados con esta a la hora de mostrarla o representarla, estos aparecen en la parte inferior de la imagen junto con las dimensiones objetivo. 
 Algo a tener en cuenta es que al redimensionarla se puede perder calidad.
 
 ------------------------------------------------------------------------
