@@ -24,31 +24,30 @@
 
 Describa en dos o tres líneas cuál es la función del sistema.
 
-_Respuesta:_ El agente permite cargar una imagen que se puede redimensionar para aumentar o disminuir los tokens que podrían ser usados con esta a la hora de mostrarla o representarla, estos aparecen en la parte inferior de la imagen junto con las dimensiones objetivo. 
-Algo a tener en cuenta es que al redimensionarla se puede perder calidad.
+_Respuesta:_ El agente permite cargar una imagen que se puede redimensionar para aumentar o disminuir los tokens que podrían ser usados con esta a la hora de mostrarla o representarla, estos aparecen en la parte inferior de la imagen junto con las dimensiones objetivo. Cabe destacar que este proceso de redimensión puede implicar una pérdida de calidad en la imagen resultante.
 
 ------------------------------------------------------------------------
 
 ## 3. Análisis PEAS
   
 **Performance**   ¿Qué significa que el agente haga bien su trabajo?
-- Logró representar la imagen con la cantidad de detalle, manteniendo su relación de aspecto o presupuesto visual como lo menciona él mismo
-- Utiliza eficientemente el presupuesto de tokens
-- Tiene una mayor conservación de información visual a mayor uso de tokens, mientras que un uso menor permite un procesamiento más rápido
+- Logró representar la imagen con la cantidad de detalle, manteniendo su relación de aspecto o presupuesto visual como lo menciona él mismo.
+- Utiliza eficientemente el presupuesto de tokens.
+- Tiene una mayor conservación de información visual a mayor uso de tokens, mientras que un uso menor permite un procesamiento más rápido.
   
 **Environment**   ¿Con qué interactúa el agente?
-- Interfaz de Higging Space
-- imagen de usurio
-- opciones de presupuesto dadas por el usuario
+- Interfaz de Hugging Face Spaces.
+- Imagen de usuario.
+- Opciones de presupuesto dadas por el usuario.
 
 **Actuators**     ¿Qué acciones produce?
-- Redimensión de imagen
-- Procesamiento de tokens 
-- Relación y comparación de redimensión por medio de las distintas opciones de redimensión
+- Redimensión de imagen.
+- Renderizado de la imagen redimensionada y visualización de las métricas en pantalla.
+- Relación y comparación de redimensión por medio de las distintas opciones de redimensión.
 
 **Sensors**       ¿Qué información recibe como entrada?
-- Recibe la imagen de usuario y la configuración (El presupuesto de tokens)
-- Proporciones de imagen
+- Recibe la imagen de usuario y la configuración (el presupuesto de tokens).
+- Proporciones de la imagen.
 
 ------------------------------------------------------------------------
 
@@ -81,10 +80,9 @@ Seleccione la opción que consideren más adecuada y explique por qué.
 > **Importante:** No existe una única respuesta correcta. Lo importante
 > es justificar la elección a partir del comportamiento observado.
 
-_Respuesta:_ En mi opinión, parece un agente de reflejo simple, ya que utiliza información sobre la imagen, sus dimensiones y el presupuesto de tokens para decidir cómo procesarla y ya.
-Es decir, opera mendiante reglas definidas, el agente no recuerda las imagenes anteriores, no traza caminos para intentar ganarle a algo porque no es un juego, y a mi parecer no está entrenando a medida que tenemos interacción.
+_Respuesta:_ En mi opinión, parece un agente de reflejo simple, ya que utiliza información sobre la imagen, sus dimensiones y el presupuesto de tokens para decidir cómo procesarla y ya. Es decir, opera mendiantemediante reglas definidas, el agente no recuerda las imagenesimágenes anteriores, no traza caminos para intentar ganarle a algo porque no es un juego, y a mi parecersegún el comportamiento observado no está entrenando a medida que tenemos interacción.
 
-Esa es mi percepción a lo que logré identificar por la página, no puedo decir con total certeza qu eno sea un modelo de aprendizaje porque no sé por dentró cómo ha sido creado el agente. 
+Esa es mi percepción a lo que logré identificar por la página, no puedo decir con total certeza qu enoque no sea un modelo decon aprendizaje porque no sé por dentródentro cómo ha sido creado el agente. 
 
 ------------------------------------------------------------------------
 
@@ -122,7 +120,7 @@ La tarea de extraer texto en OCR y convertirlo a Markdown persigue un resultado 
 - Episódico:
 El agente lo que hace es recibir un documento, procesarlo y entregar el texto. No requiere de guardar documentos anteriores, porque la conversión de un archivo no tiene ningún impacto en cómo se procesará el siguiente. No hay un recuento o historial que afecte las interacciones futuras.
 
-Me parece que es una herramienta muy directa, por ejemplo, si uno necesita extraer rápidamente un bloque de código de una captura de pantalla el agente simplemente hace la conversión y termina. No tiene flujo de conversación, no necesita hacer uso de la memoria ni analizar el contexto de lo que se subió o lo que se le envió como entrada antes. 
+Esta herramienta resulta ser muy directa, por ejemplo, si uno necesita extraer rápidamente un bloque de código de una captura de pantalla, el agente simplemente hace la conversión y termina. No tiene flujo de conversación, no necesita hacer uso de la memoria ni analizar el contexto de lo que se subió o lo que se le envió como entrada antes. 
 
 2.  **Parcialmente observable, estocástico y secuencial.**
 
@@ -140,8 +138,7 @@ El agente es parcialmente observable debido a que escucha lo que el usuario dice
 El resultado de cada interacción no es igual: El reconocimiento de voz varia por ruido, acento o entonación en la entrada dada. Inclusive la respuesta a un intento de misma entrada es diferente, lo que deja una incertidumbre clara en las respuestas pro parte del agente.
 
 - Secuencial:
-La conversación se va moldeando a medida que se va avanzando en la conversación ya que lo que responda cada uno de los entes participantes (el usuario y el agente) va a influenciar en el camino que tome la interación.
-Me parece que se hace uso de la memoria, pero no tanto, porque después de un rato le preguntaba por algo similar y no evidenciaba un comportamiento de asociación tan claro. Aunque si hay que evidenciar que es capaz de seguir un flujo de conversación y hacer uso de lo previamente dicho.
+La conversación se va moldeando a medida que se avanza en la misma, ya que lo que responda cada uno de los entes participantes (el usuario y el agente) va a influenciar en el camino que tome la interacción. Aunque el sistema hace uso de la memoria para mantener el flujo del diálogo, su capacidad de asociación a largo plazo es limitada frente a conceptos similares presentados anteriormente. Sin embargo, sí se evidencia que es capaz de seguir un flujo de conversación y hacer uso de lo previamente dicho.
 
 ------------------------------------------------------------------------
 
