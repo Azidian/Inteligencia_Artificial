@@ -81,7 +81,7 @@ Seleccione la opción que consideren más adecuada y explique por qué.
 > **Importante:** No existe una única respuesta correcta. Lo importante
 > es justificar la elección a partir del comportamiento observado.
 
-Respuesta: En mi opinión, parece un agente de reflejo simple, ya que utiliza información sobre la imagen, sus dimensiones y el presupuesto de tokens para decidir cómo procesarla y ya.
+_Respuesta:_ En mi opinión, parece un agente de reflejo simple, ya que utiliza información sobre la imagen, sus dimensiones y el presupuesto de tokens para decidir cómo procesarla y ya.
 Es decir, opera mendiante reglas definidas, el agente no recuerda las imagenes anteriores, no traza caminos para intentar ganarle a algo porque no es un juego, y a mi parecer no está entrenando a medida que tenemos interacción.
 
 Esa es mi percepción a lo que logré identificar por la página, no puedo decir con total certeza qu eno sea un modelo de aprendizaje porque no sé por dentró cómo ha sido creado el agente. 
@@ -110,20 +110,19 @@ Encuentre un Space que pueda clasificarse como:
 **Otro ejemplo**
 - Space seleccionado: OvisOCR2
 - Enlace: https://huggingface.co/spaces/ATH-MaxS/OvisOCR2
+<img width="1918" height="846" alt="image" src="https://github.com/user-attachments/assets/af1067fa-ed0b-4e82-9b6e-1cdc291eb30c" />
 
 _Justificación:_
+- Totalmente Observable:
+El agente tiene acceso a la totalidad de la información que requiere, porque cuando cargamos el documento o la imagen, el sistema percibe el contenido, todos los píxeles del texto, tablas o estructura.
 
-Totalmente Observable:
-El agente tiene acceso a la totalidad de la información requerida desde el primer momento. Al cargar el documento o la imagen, el sistema percibe el contenido completo (todos los píxeles del texto, tablas o estructura) sin que haya variables ocultas en el entorno que necesite para realizar su tarea.
+- Determinista:
+La tarea de extraer texto en OCR y convertirlo a Markdown persigue un resultado exacto. Si se ingresa exactamente la misma imagen, el sistema debería devolver la misma transcripción. A diferencia de un modelo de chat no se presenta algo que pueda alterar las salidas a la hora de ser extraidas (a menos que se entregue una imagen o PDF con particularidades espaciales)
 
-Determinista:
-La tarea de extraer texto (OCR) y convertirlo a Markdown persigue un resultado exacto. Si se ingresa exactamente la misma imagen, el sistema devolverá la misma transcripción y estructura. A diferencia de un modelo de chat, aquí no se busca creatividad ni hay un factor de azar o "temperatura" que altere drásticamente el texto extraído entre un intento y otro.
+- Episódico:
+El agente lo que hace es recibir un documento, procesarlo y entregar el texto. No requiere de guardar documentos anteriores, porque la conversión de un archivo no tiene ningún impacto en cómo se procesará el siguiente. No hay un recuento o historial que afecte las interacciones futuras.
 
-Episódico:
-El ciclo de trabajo del agente se limita a una sola acción independiente: recibir un documento, procesarlo y entregar el texto. La conversión de un archivo no tiene ningún impacto en cómo se procesará el siguiente. No hay un estado continuo ni historia que afecte las interacciones futuras.
-
-Me parece que es una herramienta muy directa, enfocada puramente en la utilidad. Por ejemplo, si uno necesita extraer rápidamente un bloque de código en C de una captura de pantalla o digitalizar un texto largo de arquitectura de sistemas, el agente simplemente hace la conversión y termina. Al no haber un flujo de conversación, no necesita hacer uso de la memoria ni analizar el contexto de lo que se haya subido horas antes.
-
+Me parece que es una herramienta muy directa, por ejemplo, si uno necesita extraer rápidamente un bloque de código de una captura de pantalla el agente simplemente hace la conversión y termina. No tiene flujo de conversación, no necesita hacer uso de la memoria ni analizar el contexto de lo que se subió o lo que se le envió como entrada antes. 
 
 2.  **Parcialmente observable, estocástico y secuencial.**
 
