@@ -4,8 +4,8 @@ Esta carpeta contiene todas las actividades prácticas, talleres y desarrollos c
 
 ## 📚 Registro de Actividades
 
-| Actividad | Descripción |
-| :--- | :--- |
-| **Actividad 1** | Desarrollo y creación de nuestra primera aplicación utilizando Streamlit. |
+| Actividad | Carpeta / Enlace | Descripción |
+| :---: | :--- | :--- |
+| **Actividad 1** | [`/01_Prueba_inicial_streamlit`](./01_Prueba_inicial_streamlit/) | Desarrollo y creación de nuestra primera aplicación utilizando Streamlit. |
 
 *(Este registro se irá actualizando a medida que se completen nuevas actividades durante las clases).*
