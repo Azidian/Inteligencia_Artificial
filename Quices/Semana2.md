@@ -26,6 +26,8 @@ Describa en dos o tres líneas cuál es la función del sistema.
 
 _Respuesta:_ El agente permite cargar una imagen que se puede redimensionar para aumentar o disminuir los tokens que podrían ser usados con esta a la hora de mostrarla o representarla, estos aparecen en la parte inferior de la imagen junto con las dimensiones objetivo. Cabe destacar que este proceso de redimensión puede implicar una pérdida de calidad en la imagen resultante.
 
+<img width="568" height="726" alt="image" src="https://github.com/user-attachments/assets/8be6096c-86a1-4054-b480-9d83a2383bfa" />
+
 ------------------------------------------------------------------------
 
 ## 3. Análisis PEAS
@@ -104,6 +106,15 @@ Encuentre un Space que pueda clasificarse como:
 
 1.  **Totalmente observable, determinista y episódico.**
 - Este de Gemma 4 es un gran ejemplo de totalmente observable, deterministico y episódico.
+
+Un ejemplo de la caracteristica episódica del modelo es que al usar la siguiente imagen en dos ocasiones diferentes, con N = 70, saca el siguiente resultado en ambas ocasiones.
+
+Link de la imagen sacada de pinterest: https://pin.it/J7Md8e267
+
+Captura de pantalla de los resultados: 
+
+<img width="597" height="162" alt="image" src="https://github.com/user-attachments/assets/ba574237-3d4d-4e03-9d31-ab6931fd1c8d" />
+
   
 **Otro ejemplo**
 - Space seleccionado: OvisOCR2
