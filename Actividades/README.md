@@ -14,6 +14,9 @@ Esta carpeta contiene todas las actividades prácticas, talleres y desarrollos r
 | **Actividad 6** | [`/06_Lecture03_algoritmos_geneticos`](./06_Lecture03_algoritmos_geneticos/) | Implementación y estudio de algoritmos genéticos como técnica de búsqueda y optimización inspirada en la evolución natural. |
 | **Actividad 7** | [`/07_Lecture03_algoritmos_geneticos_hospitales`](./07_Lecture03_algoritmos_geneticos_hospitales/) | Aplicación de algoritmos genéticos al problema de optimización de ubicación de hospitales. |
 | **Actividad 8** | [`/08_Lecture03_programacion_lineal`](./08_Lecture03_programacion_lineal/) | Formulación y solución de problemas de optimización mediante programación lineal. |
+| **Actividad 9** | [`/09_Lecture03_csp`](./09_Lecture03_csp/) | Modelamiento y resolución de Problemas de Satisfacción de Restricciones (CSP) mediante Backtracking, MRV, Forward Checking y LCV. |
+| **Actividad 10** | [`/10_Lecture03_workshop_reinas_optimizacions`](./10_Lecture03_workshop_reinas_optimizacion/) | Modelamiento y resolución del problema de las 4 reinas mediante técnicas de optimización local: Hill Climbing, Random Restart y Simulated Annealing. |
+
 
 ---
 
