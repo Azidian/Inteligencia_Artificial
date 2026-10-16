@@ -1,0 +1,4 @@
+model,best_cv_accuracy,cv_std,train_accuracy,best_params,initial_cv_accuracy
+LogisticRegression,0.9790640394088669,0.027713464392187602,1.0,{'model__C': 1},0.9790640394088669
+KNN,0.9578817733990148,0.040520048714638005,0.964772550846142,"{'model__n_neighbors': 7, 'model__weights': 'uniform'}",0.9507389162561577
+DecisionTree,0.9022167487684729,0.05861654992213133,0.9982456140350877,"{'model__max_depth': 4, 'model__min_samples_leaf': 1}",0.9022167487684729
